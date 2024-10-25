@@ -1,4 +1,4 @@
-/* .App {
+.App {
   text-align: center;
 }
 
@@ -35,40 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
-
-.app {
-  font-family: Arial, sans-serif;
-  transition: background-color 0.5s, color 0.5s;
-}
-.app.light {
-  background-color: white;
-  color: black;
-}
-
-.app.dark {
-  background-color: black;
-  color: white;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: #007bff;
-  color: white;
-}
-
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.product-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 1rem;
-  width: 200px;
-  text-align: center;
 }
