@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { ContextProvider } from './context-theme-switcher/Context';
 import ContextThemeSwitcher from './context-theme-switcher/ContextThemeSwitcher';
