@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.NavBar {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  margin-top: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.NavBar img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.NavBar h1 {
+  font-size: 24px;
+  color: purple;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 10px;
+}
+
+.cart-icon {
+  font-size: 20px;
+  margin-left: auto;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.cart-icon:hover {
+  color: #007bff;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 20px;
+}
+
+.product-container {
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+  background: linear-gradient(145deg, white, #f0f0f0);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.product-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: transform 0.3s;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+.product-title {
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: 10px;
+  width: 100%; 
+}
+
+.product-price {
+  font-size: 16px;
+  color: #333;
+}
+
+.cart-icon-in {
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s;
+  cursor: pointer; 
+}
+
+.cart-icon-in:hover {
+  color: #007bff; 
+}
