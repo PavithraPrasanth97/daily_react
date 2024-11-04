@@ -58,12 +58,17 @@
   }
   .cart-header{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     margin-bottom: 20px;
   }
-  .clear-cart-button {
-    background-color: #ff4d4d; 
+  .button-group{
+    display: flex;
+    gap:10px;
+    /* margin-right: 20px; */
+  }
+  .clear-cart-button, .back-button {
+    background-color: #ff4d4d;     
     color: white;
     border: none;
     border-radius: 5px;
@@ -72,7 +77,8 @@
     transition: background-color 0.3s;
   }
   
-  .clear-cart-button:hover {
+  .clear-cart-button,.back-button:hover {
     background-color: #ff1a1a; 
   }
   
+ 

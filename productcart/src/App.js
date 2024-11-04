@@ -14,8 +14,10 @@ function App() {
   };
   const clearCart = () => {
     setCartItems([]);
-
   }
+  // const back = () => {
+    
+  // }
   return (
     <Router>
     <div>

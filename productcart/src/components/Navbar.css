@@ -1,6 +1,10 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing:border-box;
+}
+body {
+  margin:0;
 }
 
 .NavBar {
@@ -12,6 +16,7 @@
   margin-top: 10px;
   width: 100%;
   position: relative;
+  z-index:1;
 }
 
 .NavBar img {
@@ -25,6 +30,9 @@
   color: purple;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-left: 10px;
+}
+ h2 {
+  margin-left:20px;
 }
 
 .cart-icon {
@@ -93,6 +101,7 @@
   color: #333;
 }
 
+
 .cart-icon-in {
   font-size: 16px;
   color: #333;
@@ -103,3 +112,42 @@
 .cart-icon-in:hover {
   color: #007bff; 
 }
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .NavBar{
+    width:100%;
+  }
+}
+@media (max-width: 480px) {
+  .NavBar{
+    width:100%;
+  }
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+  .product-image{
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: transform 0.3s;
+  }
+  .product-title {
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: left;
+  }
+}
+@media (max-width: 985px) {
+  .NavBar{
+    width:100%;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+}
+

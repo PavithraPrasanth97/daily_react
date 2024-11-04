@@ -12,6 +12,7 @@ const Navbar = ({cartItems}) => {
         <img src={onlineshoping} alt="Logo"/>
         <h1>Webcom</h1>
         {/* <h1>My Store</h1> */}
+        
         <Link to="/cart" className='cart-icon'>
         <FontAwesomeIcon icon={faShoppingCart}/>
         <span>{cartItems.length}</span> 
