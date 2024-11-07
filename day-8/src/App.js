@@ -6,18 +6,21 @@ import Error from "./components/Error";
 import Param from "./components/Param";
 import Login from "./components/Login";
 import Layout from './components/Layout';
+import { AuthProvider } from './context/AuthContext';
+import ProductiveRoute from './components/ProductiveRoute';
 
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+        <AuthProvider>
+      <BrowserRouter>    
       <Routes>
         <Route path="/" element={<Layout/>}>
-        <Route index element={<Home/>}/>
-        <Route path="/about" element={<About/>}caseSensitive/>
-        <Route path="/:productId" element={<Param/>}/>
-        <Route path="/:meetId" element={<Param/>}/>
+        <Route index element={<ProductiveRoute><Home/></ProductiveRoute>}/>
+        <Route path="/about" element={<ProductiveRoute><About/></ProductiveRoute>}caseSensitive/>
+        <Route path="/:productId" element={<ProductiveRoute><Param/></ProductiveRoute>}/>
+        <Route path="/:meetId" element={<ProductiveRoute><Param/></ProductiveRoute>}/>
         
         </Route>
         <Route path="*" element={<Error/>}/>     
@@ -25,6 +28,7 @@ function App() {
       </Routes>
       
       </BrowserRouter>
+      </AuthProvider>
     
     </div>
   );

@@ -1,12 +1,16 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import {useNavigate} from "react-router-dom"
+import AuthContext from '../context/AuthContext';
 
 const Login = () => {
     const [name, setName]=useState("");
+ 
+    const {handleLoginAuth} = useContext(AuthContext);
     const navigate = useNavigate();
     function handleLogin(){
         if(name === "Pavithra"){
             console.log("Login Successfully");
+            handleLoginAuth();
             navigate("/about");
         }
         else{

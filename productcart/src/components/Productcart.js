@@ -24,7 +24,6 @@ const Productcart = ({addToCart}) => {
             image={product.image}
             price={product.price}
             title={product.title}
-            id={product.id}
             addToCart={addToCart}
            
             />
