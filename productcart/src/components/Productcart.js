@@ -18,14 +18,14 @@ const productsData = [
 const Productcart = ({addToCart}) => {
   return (
     <div className='product-grid'>
-        {productsData.map((product,index)=>(
+        {productsData.map((product)=>(
             <Product
-            key={index}
+            key={product.id}
             image={product.image}
             price={product.price}
             title={product.title}
-            addToCart={addToCart}
-           
+            addToCart={addToCart} 
+            id={product.id}
             />
 
         ))}

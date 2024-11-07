@@ -1,20 +1,22 @@
-import React from 'react'
-import './Navbar.css'
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-const Product = ({image,title,price,addToCart,id}) => {
+const Product = ({ image, title, price, addToCart, id }) => {
   return (
     <div className='product-container'>
-        <img src={image} alt={title} className='product-image'/>
-        <div className='price-container'>
+      <img src={image} alt={title} className='product-image' />
+      <div className='price-container'>
         <p className='product-price'>{price}</p>
-      <FontAwesomeIcon icon={faShoppingCart} className='cart-icon-in' onClick={() => addToCart({title,price,image,id})} />
-        </div>
-        <p className='product-title'>{title}</p>
-       
+        <FontAwesomeIcon 
+          icon={faShoppingCart} 
+          className='cart-icon-in' 
+          onClick={() => addToCart({ image, title, price, id })} 
+        />
+      </div>
+      <p className='product-title'>{title}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
