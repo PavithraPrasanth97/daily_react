@@ -84,11 +84,11 @@ const Modal = ({ isOpen, onClose, onSignup, onLogin, isSignup, setIsSignup, sign
             </div>
           )}
 
-          {/* Display error message if any */}
+          
           {errorMessage && <div className="error-message">{errorMessage}</div>}
           <br></br>
 
-          {/* Show signup success message if the user has signed up successfully */}
+          
           {signupSuccess && !isSignup && <div className="success-message">Signup successful! Please login.</div>}
           <br></br>
 
