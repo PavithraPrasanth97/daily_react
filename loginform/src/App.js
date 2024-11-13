@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter as Router, useLocation } from 'react-route
 import { AuthProvider } from './context/AuthContext';  // Correct import of AuthProvider
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import Page from './components/Page';
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const AppRoutes = () => {
   const location = useLocation();
 
   // Determine whether to show Navbar based on the current pathname
-  const showNavbar = location.pathname !== '/home';
+  const showNavbar = location.pathname !== '/home' && location.pathname !== '/page';
 
   return (
     <>
@@ -29,6 +30,7 @@ const AppRoutes = () => {
       {/* Set up routes */}
       <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path="/page" element={<Page />} />
         {/* Add more routes as needed */}
       </Routes>
     </>

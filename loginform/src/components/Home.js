@@ -41,19 +41,24 @@ const Home = () => {
     return <div>Error: {error}</div>;
   }
 
+  const handleTitleClick = (post) => {
+    // Use navigate to go to the 'page' and pass post data in state
+    navigate('/page', { state: { post } });
+  };
+
   return (
     <div className="home-container">
-      
       <div className="logout-container">
         <button className="logout-btn" onClick={handleLogout}>Logout</button>
       </div>
-
 
       <h2>Fetched Posts</h2>
       <div className="home-grid">
         {data.map((post) => (
           <div key={post.id} className="grid-item">
-            <h3>{post.title}</h3>
+            <button id="post-title-btn" onClick={() => handleTitleClick(post)}>
+              <h3>{post.title}</h3>
+            </button>
           </div>
         ))}
       </div>
