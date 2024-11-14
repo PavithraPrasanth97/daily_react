@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSignup, setIsSignup] = useState(true); // Track if we are showing signup or login form
   const [signupData, setSignupData] = useState({ username: '', password: '' }); // Store signup data
-  const { isAuthenticated, signup, login, logout } = useAuth(); // Access context
+  const {  signup, login, logout } = useAuth(); // Access context
   const navigate = useNavigate();
 
   const handleOpenModal = () => {
@@ -44,11 +44,9 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="app-name">Signup/Login Page</div>
         <div className="navbar-buttons">
-          {isAuthenticated ? (
-            <button onClick={handleLogout}>Logout</button>
-          ) : (
+        
             <button onClick={handleOpenModal}>Signup/Login</button>
-          )}
+          
         </div>
       </nav>
 

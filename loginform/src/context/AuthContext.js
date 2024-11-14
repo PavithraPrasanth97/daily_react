@@ -14,18 +14,19 @@ export const AuthProvider = ({ children }) => {
     const storedPassword = localStorage.getItem('password');
 
     if (storedUsername && storedPassword) {
+      // Here we assume the user is authenticated if valid credentials exist in localStorage
       setIsAuthenticated(true);
       setUserCredentials({ username: storedUsername, password: storedPassword });
     }
   }, []);
 
   const signup = (username, password) => {
-    // Save credentials to localStorage after signup
+    // Save credentials to localStorage after signup (Note: consider better security for production)
     localStorage.setItem('username', username);
     localStorage.setItem('password', password);
 
     setUserCredentials({ username, password });
-    setIsAuthenticated(false); // Stay logged out after signup
+    setIsAuthenticated(false); // Stay logged out after signup (consider changing this logic)
   };
 
   const login = (username, password) => {
@@ -42,7 +43,9 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
-    // Just clear the authenticated state, not the credentials in localStorage
+    // Clear credentials from both state and localStorage
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
     setIsAuthenticated(false);
     setUserCredentials(null);
   };
